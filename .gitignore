@@ -1,0 +1,48 @@
+# Terraform state
+*.tfstate
+*.tfstate.backup
+*.tfplan
+
+# Crash log files
+crash.log
+
+# Sensitive variable definitions
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Sensitive environment files
+.env
+*.env
+*.secrets
+*.secret
+*.credentials
+*.creds
+*.pem
+*.key
+*.crt
+.json
+
+# Terraform provider overrides
+.override.tf
+override.tf.json
+
+# Module downloads
+.terraform/
+
+# Local .terraformrc or override config
+.terraformrc
+terraform.rc
+
+# Ignore logs
+*.log
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
