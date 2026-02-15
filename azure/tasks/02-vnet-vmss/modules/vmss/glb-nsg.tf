@@ -6,7 +6,6 @@ resource "azurerm_network_security_group" "glb" {
   tags                = var.tags
 }
 
-# Required for Application Gateway v2: control plane and health probes (Azure docs)
 resource "azurerm_network_security_rule" "glb_gateway_manager" {
   name                        = "AllowGatewayManager"
   priority                    = 100

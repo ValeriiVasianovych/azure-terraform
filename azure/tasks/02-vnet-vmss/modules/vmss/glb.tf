@@ -2,6 +2,12 @@ resource "azurerm_application_gateway" "glb" {
   name                = "${var.project_name}-${var.environment}-glb"
   resource_group_name = var.resource_group_name
   location            = var.location
+
+  depends_on = [
+    azurerm_network_security_rule.glb_gateway_manager,
+    azurerm_network_security_rule.glb_azure_lb,
+  ]
+
   sku {
     name     = "Standard_v2"
     tier     = "Standard_v2"
